@@ -1,0 +1,308 @@
+#Chapter 1: Exercises 1~5
+#Exercise 1: Write a Python program to print the following string in a specific format. Twinkle, twinkle, little star, How I wonder what you are! Up above the world so high, Like a diamond in the sky. Twinkle, twinkle, little star, How I wonder what you are.
+print("Twinkle, twinkle, little star, How I wonder what you are! Up above the world so high, Like a diamond in the sky. Twinkle, twinkle, little star, How I wonder what you are.\n")
+#Exercise 2: Print the version of Python
+import sys
+print(sys.version,"\n")
+#Exercise 3: Print date and time
+import datetime
+current_datetime=datetime.datetime.now()
+print(current_datetime.strftime("%Y-%m-%d %H:%M:%S\n"))
+#Exercise 4: String Concatenation. Write three strings in different variables and print the output as one string.
+string1="Hello,"
+string2="my name is"
+string3="Slim Shady!"
+print(string1,string2,string3,"\n")
+#Exercise 5: Compute Area of Circle. Write a Python program which accepts the radius of a circle from the user and compute the area.
+from math import pi
+radius=float(input("Input the radius of the circle: "))
+area_of_circle=pi*radius**2
+print(f"The area of the circle with radius of {radius} is {area_of_circle}.\n")
+#Chapter 2: Exercises 1~5
+#Exercise 1: Variables. Assign a message to a variable, and print that message. Then change the value of the variable to a new message, and print the new message.
+message="This is the first message"
+print(message)
+message="This is the changed message\n"
+print(message)
+#Exercise 2: Variables. Find a quote from a famous person you admire. Print the quote and the name of its author. Your output should look something like the following, including the quotation marks: Albert Einstein once said, “A person who never made a mistake never tried anything new."
+quote='Martin Luther King Jr once said,"Out of a mountain of despair, a stone of hope."\n'
+print(quote)
+#Exercise 3: Stripping Names. Tidy up the code to make it easier to understand. Use a variable to represent a person’s name, and include some whitespace characters at the beginning and end of the name. Make sure you use each character combination, “\t” and “\n”, at least once. Print the name once, so the whitespace around the name is displayed. Then print the name using each of the three stripping functions, lstrip(), rstrip(), and strip().
+name=" \n  Antonio \t   "
+print(name)
+print(name.lstrip())
+print(name.rstrip())
+print(name.strip())
+#Exercise 4: Favorite Number. Use a variable to represent your favorite number. Then,using that variable, create a message that reveals your favorite number. Print that message.
+fav_number=6
+print("My favorite number is the number",str(fav_number)+"!")
+#Exercise 5: USB Shopper. A girl heads to a computer shop to buy some USB sticks. She loves USB sticks and wants as many as she can get for £50. They are £6 each. Write a programme that calculates how many USB sticks she can buy and how many pounds she will have left. You will to use the arithmetic operators to complete this exercise.
+usb_bought= 50//6
+money_left=50%6
+print("A girl heads to a computer shop to buy some USB sticks. She loves USB sticks and wants as many as she can get for £50. She can buy",usb_bought,"USB sticks and the amount of money she has left is",str(money_left)+".")
+#Chapter 3. Exercises 1~7
+#Exercise 1: Names. Store the names of a few of your friends in a list called names.
+names=["Slim","Shady","Joe","Biden"]
+#Print each person’s name by accessing each element in the list, one at a time.
+for name in names:
+    print(name)
+#Exercise 2: Greetings. Start with the list you used in Exercise 1, but instead of just printing each person’s name, print a message to them. The text of each message should be the same, but each message should be personalized with the person’s name.
+for name in names:
+    print("Greetings,",name,"how are you doing?")
+#Exercise 3: Your Own List. Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several examples.
+vehicle=["Honda car","Lamborghini car","Dirt bike"]
+#Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
+for i in vehicle:
+    print("I would like to own a",i,"one day.")
+#Exercise 4: Guest List. If you could invite anyone, living or deceased, to dinner, who would you invite? Make a list that includes at least three people you’d like to invite to dinner.
+guest=["Antonio","Miguel","Intal"]
+#Then use your list to print a message to each person, inviting them to dinner.
+for i in guest:
+    print("Hello,",i+"! I would like to invite you to dinner!")
+#Exercise 5. Change Guest List. You just heard that one of your guests can’t make the dinner, so you need to send out a new set of invitations. You’ll have to think of someone else to invite. Start with your program from Exercise 3-4. Add a print() call at the end of your program stating the name of the guest who can’t make it. Modify your list, replacing the name of the guest who can’t make it with the name of the new person you are inviting.
+print("It's so sad",guest.pop(0),"couldn't make it. I will invite someone else on my list!")
+guest.insert(0,"Jo")
+#Print a second set of invitation messages, one for each person who is still in your list.
+for i in guest:
+    print("Greetings,",i+"! I would like to invite you to my dinner!")
+#Exercise 6. Shrinking Guest List. You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests. Start with your program from Exercise 3-5. Add a new line that prints a message saying that you can invite only two people for dinner. Use pop() to remove guests from your list one at a time until only two names remain in your list.
+print("My new dinner table couldn't arrive in time, so I can only have 2 guests for my dinner!")
+#Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+print("I'm so sorry,",guest.pop(1)+", I can only host 2 guests for my dinner!")
+#Print a message to each of the two people still on your list, letting them know they’re still invited.
+for i in guest:
+    print("Hello,",i+"! You're still invited to my dinner!")
+#Use del to remove the last two names from your list, so you have an empty list.
+del guest[0]
+del guest[0]
+#Print your list to make sure you actually have an empty list at the end of your program.
+print(guest)
+#Exercise 7. Seeing the world. Think of at least five places in the world you’d like to visit. Store the locations in a list. Make sure the list is not in alphabetical order.
+places=["China","South Africa","Canada","Ireland","New Zealand"]
+#Print your list in its original order. Don’t worry about printing the list neatly,just print it as a raw Python list.
+print(places)
+#Use sorted() to print your list in alphabetical order without modifying the actual list.
+print(sorted(places))
+#Show that your list is still in its original order by printing it.
+print(places)
+#Use sorted() to print your list in reverse alphabetical order without changing the order of the original list.
+print(sorted(places,reverse=True))
+#Show that your list is still in its original order by printing it again.
+print(places)
+#Use reverse() to change the order of your list. Print the list to show that its order has changed.
+places.reverse()
+print(places)
+#Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+places.reverse()
+print(places)
+#Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+places.sort()
+print(places)
+#Use sort() to change your list so it’s stored in reverse alphabetical order. Print the list to show that its order has changed.
+places.sort(reverse=True)
+print(places)
+#Chapter 4: Exercises 1~5
+#Exercise 1: Alien Colors.
+#Imagine an alien was just shot down in a game. Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
+alien_color="green"
+#Write an if statement to test whether the alien’s color is green. If it is, print a message that the player just earned 5 points.
+if alien_color=="green":
+    print("You earned 5 points!")
+#Write one version of this program that passes the if test and another that fails. (The version that fails will have no output.)
+version1="green"
+if version1=="green":
+    print("You earned 5 points!")
+version2="red"
+if version2=="green":
+    print("You earned 5 points!")
+#Exercise 2: Alien Colors. Choose a color for an alien as you did in Exercise 5-3, and write an if-else chain. If the alien’s color is green, print a statement that the player just earned 5 points for shooting the alien. If the alien’s color isn’t green, print a statement that the player just earned 10 points. Write one version of this program that runs the if block and another that runs the else block.
+version1="green"
+if version1=="green":
+    print("You earned 5 points for shooting the green alien!")
+else:
+    print("You earned 10 points for shooting the non-green alien!")
+version2="red"
+if version2=="green":
+    print("You earned 5 points for shooting the green alien!")
+else:
+    print("You earned 10 points for shooting the non-green alien!")
+#Exercise 3: Alien Colors. Turn your if-else chain from Exercise 5-4 into an if-elifelse chain. Write three versions of this program, making sure each message is printed for the appropriate color alien.
+version1="green"
+#If the alien is green, print a message that the player earned 5 points.
+if version1=="green":
+    print("You earned 5 points!")
+#If the alien is yellow, print a message that the player earned 10 points.
+elif version1=="yellow":
+    print("You earned 10 points!")
+#If the alien is red, print a message that the player earned 15 points.
+else:
+    print("You earned 15 points!")
+version2="yellow"
+if version2=="green":
+    print("You earned 5 points!")
+elif version2=="yellow":
+    print("You earned 10 points!")
+else:
+    print("You earned 15 points!")
+version3="red"
+if version3=="green":
+    print("You earned 5 points!")
+elif version3=="yellow":
+    print("You earned 10 points!")
+else:
+    print("You earned 15 points!")
+#Exercise 4: Stages of Life. Write an if-elif-else chain that determines a person’s stage of life. Set a value for the variable age,
+age=int(input("Enter your age: "))
+#and then: If the person is less than 2 years old, print a message that the person is a baby.
+if age <2 :
+    print("The person is a baby.")
+#If the person is at least 2 years old but less than 4, print a message that the person is a toddler.
+elif age>=2 and age<4:
+    print("The person is a toddler.")
+#If the person is at least 4 years old but less than 13, print a message that the person is a kid.
+elif age>=4 and age<13:
+    print("The person is a kid.")
+#If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
+elif age>=13 and age<20:
+    print("The person is a teenager.")
+#If the person is at least 20 years old but less than 65, print a message that the person is an adult.
+elif age>=20 and age<65:
+    print("The person is an adult.")
+#If the person is age 65 or older, print a message that the person is an elder.
+else:
+    print("The person is an elder.")
+#Exercise 5: Favorite Fruit. Make a list of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your list. Make a list of your three favorite fruits and call it favorite_fruits.
+favorite_fruits=["bananas","apples","tomatoes"]
+#Write five if statements. Each should check whether a certain kind of fruit is in your list. If the fruit is in your list, the if block should print a statement, such as: You really like bananas!
+if "bananas" in favorite_fruits:
+    print("You really like bananas!")
+if "pumpkins" in favorite_fruits:
+    print("You really like pumpkins!")
+if "oranges" in favorite_fruits:
+    print("You really like oranges!")
+if "apples" in favorite_fruits:
+    print("You really like apples!")
+if "mangoes" in favorite_fruits:
+    print("You really like mangoes!")
+#Chapter 5: Exercises 1~5.
+#Exercise 1: Person. Use a dictionary to store information about a person you know. Store their first name, last name, age, and the city in which they live. You should have keys such as first_name, last_name, age, and city. Print each piece of information stored in your dictionary.
+person={'first_name':'Joe','last_name':'Biden','age':'42','city':'Washington D.C.'}
+print(person)
+#Exercise 2: Glossary. A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary. Think of five programming words you’ve learned about in the previous chapters. Use these words as the keys in your glossary, and store their meanings as values.
+pythonwords={'print':'is a function that displays the output of whatever is stored in its parenthesis.','sort':"is a function that sorts the list into an alphabetical or ascending order. This function is written as: exvariable.sort(). This function will make the variable's contents be replaced with the sorted ones.",'while':'is a keyword that will accept a condition, and if it is True, will execute its contents until the condition is False.','break':'will make the code exit out of the loop.','continue':'will skip the condition and return to the top of the loop.'}
+#Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and then its meaning, or print the word on one line and then print its meaning indented on a second line. Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
+print("print\n",pythonwords['print'])
+print("sort\n",pythonwords['sort'])
+print("while\n",pythonwords['while'])
+print("break\n",pythonwords['break'])
+print("continue\n",pythonwords['continue']+"\n")
+#Exercise 3: Glossary 2. Now that you know how to loop through a dictionary, clean up the code from Exercise 6-3 (page 99) by replacing your series of print() calls with a loop that runs through the dictionary’s keys and values. When you’re sure that your loop works, add five more Python terms to your glossary. When you run your program again, these new words and meanings should automatically be included in the output.
+pythonwords['sorted']="will sort the contents of a variable into an alphabetical or ascending order. Unlike the 'sort' keyword, it will only be done temporarily, so it is better to store this function in a variable like: newvar=sorted(exvar). It could also be done like: print(sorted(exvariable)) but the variable will still be same next time it's called."
+pythonwords['reverse']="will reverse the order of the variable, which is the opposite of sort/sorted functions. It is done permanently and is written as: exvar.reverse()"
+pythonwords['del']="will delete the entire variable that the next time it's called, it will no longer be defined."
+pythonwords['clear']="will clear the content of a list-type variable, but only making it empty. It is written as: exvar.clear()"
+pythonwords['keys']="will get the Key values of a dictionary variable. It is written as: exvar.keys(). Putting it in a variable like: newvar=exvar.keys() will cause the newvar variable have all the Key values in the dictionary. "
+for key,value in pythonwords.items():
+    print(key,value+"\n")
+#Exercise 4: Rivers. Make a dictionary containing three major rivers and the country each river runs through. One key-value pair might be 'nile': 'egypt'. Use a loop to print a sentence about each river, such as The Nile runs through Egypt. Use a loop to print the name of each river included in the dictionary. Use a loop to print the name of each country included in the dictionary.
+rivers={"Amazon":"Peru","Yangtze":"China","Mississippi":"US"}
+for key,value in rivers.items():
+    print("The",key,"river runs through the country of",value+".")
+#Exercise 5: Pets. Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name.
+pet1={"animal":"dog","owner":"Bruh"}
+pet2={"animal":"cat","owner":"Bruv"}
+pet3={"animal":"crocodile","owner":"Matey"}
+#Store these dictionaries in a list called pets. Next, loop through your list and as you do, print everything you know about each pet.
+pets=[pet1,pet2,pet3]
+for a in pets:
+    print("The pet is an animal called a",a['animal']+". His owner is called",a['owner']+".")
+#Chapter 6: Exercises 1~5
+#Exercise 1: Pizza Toppings. Write a loop that prompts the user to enter a series of pizza toppings until they enter a 'quit' value. As they enter each topping, print a message saying you’ll add that topping to their pizza.
+while True:
+    topping=input("Enter a pizza topping or enter 'quit' to stop: ")
+    if topping=="quit":
+        break
+    else:
+        print("You have entered",topping,"as a pizza topping!")
+#Exercise 2: Movie Tickets. A movie theater charges different ticket prices depending on a person’s age. If a person is under the age of 3, the ticket is free; if they are between 3 and 12, the ticket is $10; and if they are over age 12, the ticket is $15. Write a loop in which you ask users their age, and then tell them the cost of their movie ticket.
+while True:
+    age=int(input("Enter your age. Your movie ticket will be based on how old you are. Enter '0' to stop: "))
+    if age==0:
+        break
+    else:
+        if age<3:
+            print("Your movie ticket costs free.")
+        elif age>=3 and age<12:
+            print("Your movie ticket costs $10.")
+        else:
+            print("Your movie ticket costs $15.")
+#Exercise 3: Infinity loop. Write a loop that never ends, and run it. (To end the loop, press ctrl-C or close the window displaying the output.)
+a=0
+while True:
+    a+=1
+    print(a)
+#Exercise 4: Deli. Make a list called sandwich_orders and fill it with the names of various sandwiches.
+sandwich_orders=['Tuna sandwich','Grilled cheese','Ham sandwich','Chicken sandwich','Egg sandwich']
+#Then make an empty list called finished_sandwiches.
+finished_sandwiches=[]
+#Loop through the list of sandwich orders and print a message for each order, such as I made your tuna sandwich.
+while True:
+    print("Here are the sandwiches in my recipe:",sandwich_orders)
+    typer=input("Enter your order in my recipe\n")
+    if typer in sandwich_orders:
+        print("I made your",typer+".")
+#As each sandwich is made, move it to the list of finished sandwiches.
+        finished_sandwiches.append(typer)
+        sandwich_orders.remove(typer)
+#After all the sandwiches have been made, print a message listing each sandwich that was made.
+        if len(sandwich_orders)==0:
+            typer=input("You entered all the sandwiches in my recipe! Enter 'y' to try again, any key to exit.\n")
+            if typer=='y':
+                sandwich_orders=finished_sandwiches
+                finished_sandwiches=[]
+                continue
+            else:
+                break
+    elif typer in finished_sandwiches:
+        print("I already made that sandwich! Try again!")
+        
+    else:
+        print("That's not in my recipe! Try again!")
+#Exercise 5: No Pastrami. Using the list sandwich_orders from Exercise 7-8, make sure the sandwich 'pastrami' appears in the list at least three times. Add code near the beginning of your program to print a message saying the deli has run out of pastrami, and then use a while loop to remove all occurrences of 'pastrami' from sandwich_orders. Make sure no pastrami sandwiches end up in finished_sandwiches.
+sandwich_orders=['Pastrami sandwich','Pastrami sandwich','Pastrami sandwich','Tuna sandwich','Grilled cheese','Ham sandwich','Chicken sandwich','Egg sandwich']
+finished_sandwiches=[]
+print("The deli has run out of pastrami sandwich! Sad!")
+while sandwich_orders.count('Pastrami sandwich')>0:
+    sandwich_orders.remove('Pastrami sandwich')
+    print("Here are the sandwiches in my recipe:",sandwich_orders)
+    print("Finished sandwiches:",finished_sandwiches)
+#Chapter 7 Exercises 1~5
+#Exercise 1: Write a function called display_message() that prints one sentence telling everyone what you are learning about in this chapter. Call the function, and make sure the message displays correctly.
+def display_message():
+    print("We are learning about functions!")
+display_message()
+#Exercise 2: Favorit Book. Write a function called favorite_book() that accepts one parameter, title. The function should print a message, such as One of my favorite books is Alice in Wonderland. Call the function, making sure to include a book title as an argument in the function call.
+def favorite_book(title):
+    print("One of my favorite books is",title+"!")
+favorite_book("Alice in Wonderland")
+#Exercise 3: T-shirt. Write a function called make_shirt() that accepts a size and the text of a message that should be printed on the shirt. The function should print a sentence summarizing the size of the shirt and the message printed on it.
+def make_shirt(size,text):
+    print(f'The size of the shirt is {size} and the text printed on it is "{text}"')
+#Call the function once using positional arguments to make a shirt.
+make_shirt(12,"bruh")
+#Call the function a second time using keyword arguments.
+make_shirt(size=42,text="deez")
+#Exercise 4: Large Shirts. Modify the make_shirt() function so that shirts are large by default with a message that reads I love Python.
+def make_shirt(size="large",text="I love python"):
+    print(f'The size of the shirt is {size} and the text printed on it is "{text}"')
+#Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
+make_shirt()
+make_shirt("medium")
+make_shirt(69,"different message")
+#Exercise 5: Cities. Write a function called describe_city() that accepts the name of a city and its country. The function should print a simple sentence, such as Reykjavik is in Iceland. Give the parameter for the country a default value. Call your function for three different cities, at least one of which is not in the default country.
+def describe_city(city,country="UAE"):
+    print(f'The city called "{city}" is in the country called "{country}".')
+describe_city("Abu Dhabi")
+describe_city("Dubai")
+describe_city("Amsterdam","Netherlands")
+#COMPLETED CHAPTERS: 1,2,3,4,5,6,7
