@@ -1,0 +1,64 @@
+#Welcome to the drinks and snacks vending machine
+
+#Print the menu of items
+print("Welcome to the drinks and snacks vending machine!")
+print("Please select an item from the list below:")
+print("Drinks:")
+print("1. Water - $1.00")
+print("2. Soda - $1.50")
+print("3. Juice - $2.00")
+print("Snacks:")
+print("4. Chips - $1.00")
+print("5. Chocolate bar - $1.50")
+print("6. Sandwich - $2.50")
+
+#Capture user input
+selection = input("Please enter the item number you would like to purchase: ")
+
+#Validate selection
+while selection not in ("1","2","3","4","5","6"):
+    print("Invalid selection. Please select a valid item number.")
+    selection = input("Please enter the item number you would like to purchase: ")
+
+#Manage money
+if selection == "1":
+    price = 1.00
+elif selection == "2":
+    price = 1.50
+elif selection == "3":
+    price = 2.00
+elif selection == "4":
+    price = 1.00
+elif selection == "5":
+    price = 1.50
+elif selection == "6":
+    price = 2.50
+
+print("The price of your selection is $" + str(price))
+payment = float(input("Please enter the amount of money you would like to give: $"))
+
+#Check that payment is enough
+while payment < price:
+    print("Insufficient amount.")
+    payment = float(input("Please enter the amount of money you would like to give: $"))
+
+#Calculate change
+change = payment - price
+if change > 0:
+    print("Your change is $" + str(change))
+
+#Dispense the item
+if selection == "1":
+    print("Here is your water.")
+elif selection == "2":
+    print("Here is your soda.")
+elif selection == "3":
+    print("Here is your juice.")
+elif selection == "4":
+    print("Here are your chips.")
+elif selection == "5":
+    print("Here is your chocolate bar.")
+elif selection == "6":
+    print("Here is your sandwich.")
+
+print("Thank you for using this vending machine. Have a great day!")
