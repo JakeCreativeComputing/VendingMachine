@@ -11,7 +11,7 @@ print(current_datetime.strftime("%Y-%m-%d %H:%M:%S\n"))
 #Exercise 4: String Concatenation. Write three strings in different variables and print the output as one string.
 string1="Hello,"
 string2="my name is"
-string3="Slim Shady!"
+string3="Shaky Munch!"
 print(string1,string2,string3,"\n")
 #Exercise 5: Compute Area of Circle. Write a Python program which accepts the radius of a circle from the user and compute the area.
 from math import pi
@@ -28,7 +28,7 @@ print(message)
 quote='Martin Luther King Jr once said,"Out of a mountain of despair, a stone of hope."\n'
 print(quote)
 #Exercise 3: Stripping Names. Tidy up the code to make it easier to understand. Use a variable to represent a person’s name, and include some whitespace characters at the beginning and end of the name. Make sure you use each character combination, “\t” and “\n”, at least once. Print the name once, so the whitespace around the name is displayed. Then print the name using each of the three stripping functions, lstrip(), rstrip(), and strip().
-name=" \n  Antonio \t   "
+name=" \n  Jake \t   "
 print(name)
 print(name.lstrip())
 print(name.rstrip())
@@ -42,7 +42,7 @@ money_left=50%6
 print("A girl heads to a computer shop to buy some USB sticks. She loves USB sticks and wants as many as she can get for £50. She can buy",usb_bought,"USB sticks and the amount of money she has left is",str(money_left)+".")
 #Chapter 3. Exercises 1~7
 #Exercise 1: Names. Store the names of a few of your friends in a list called names.
-names=["Slim","Shady","Joe","Biden"]
+names=["Shaky","Munch","Jepoy","Asiong"]
 #Print each person’s name by accessing each element in the list, one at a time.
 for name in names:
     print(name)
@@ -50,12 +50,12 @@ for name in names:
 for name in names:
     print("Greetings,",name,"how are you doing?")
 #Exercise 3: Your Own List. Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several examples.
-vehicle=["Honda car","Lamborghini car","Dirt bike"]
+vehicle=["Tesla","Jdm Car","Ferari"]
 #Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
 for i in vehicle:
     print("I would like to own a",i,"one day.")
 #Exercise 4: Guest List. If you could invite anyone, living or deceased, to dinner, who would you invite? Make a list that includes at least three people you’d like to invite to dinner.
-guest=["Antonio","Miguel","Intal"]
+guest=["Albert","Zeke","Zach"]
 #Then use your list to print a message to each person, inviting them to dinner.
 for i in guest:
     print("Hello,",i+"! I would like to invite you to dinner!")
@@ -78,7 +78,7 @@ del guest[0]
 #Print your list to make sure you actually have an empty list at the end of your program.
 print(guest)
 #Exercise 7. Seeing the world. Think of at least five places in the world you’d like to visit. Store the locations in a list. Make sure the list is not in alphabetical order.
-places=["China","South Africa","Canada","Ireland","New Zealand"]
+places=["Paris","Thailand","Canada","New York","Japan"]
 #Print your list in its original order. Don’t worry about printing the list neatly,just print it as a raw Python list.
 print(places)
 #Use sorted() to print your list in alphabetical order without modifying the actual list.
@@ -172,7 +172,7 @@ elif age>=20 and age<65:
 else:
     print("The person is an elder.")
 #Exercise 5: Favorite Fruit. Make a list of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your list. Make a list of your three favorite fruits and call it favorite_fruits.
-favorite_fruits=["bananas","apples","tomatoes"]
+favorite_fruits=["Orange","Grapes","apples"]
 #Write five if statements. Each should check whether a certain kind of fruit is in your list. If the fruit is in your list, the if block should print a statement, such as: You really like bananas!
 if "bananas" in favorite_fruits:
     print("You really like bananas!")
@@ -209,9 +209,9 @@ rivers={"Amazon":"Peru","Yangtze":"China","Mississippi":"US"}
 for key,value in rivers.items():
     print("The",key,"river runs through the country of",value+".")
 #Exercise 5: Pets. Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name.
-pet1={"animal":"dog","owner":"Bruh"}
-pet2={"animal":"cat","owner":"Bruv"}
-pet3={"animal":"crocodile","owner":"Matey"}
+pet1={"animal":"dog","owner":"Shesh"}
+pet2={"animal":"cat","owner":"Cairo"}
+pet3={"animal":"crocodile","owner":"Dagul"}
 #Store these dictionaries in a list called pets. Next, loop through your list and as you do, print everything you know about each pet.
 pets=[pet1,pet2,pet3]
 for a in pets:
@@ -284,7 +284,7 @@ display_message()
 #Exercise 2: Favorit Book. Write a function called favorite_book() that accepts one parameter, title. The function should print a message, such as One of my favorite books is Alice in Wonderland. Call the function, making sure to include a book title as an argument in the function call.
 def favorite_book(title):
     print("One of my favorite books is",title+"!")
-favorite_book("Alice in Wonderland")
+favorite_book("Marvel")
 #Exercise 3: T-shirt. Write a function called make_shirt() that accepts a size and the text of a message that should be printed on the shirt. The function should print a sentence summarizing the size of the shirt and the message printed on it.
 def make_shirt(size,text):
     print(f'The size of the shirt is {size} and the text printed on it is "{text}"')
